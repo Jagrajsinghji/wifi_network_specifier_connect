@@ -1,14 +1,11 @@
 # wifinetworkspecifierconnect
 
-A new Flutter plugin which uses wifi network specifier for Android Q
+A Flutter plugin which uses wifi network specifier for *Android Q*. 
+For android less than *Q* it uses *wifimanager* to connect to wifi.
 
-## Getting Started
+This plugin just support connecting to a particular wifi on android and that's it.
+I will work on iOS integration later.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+You can get connected or not connected state as *true* or *false*.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+# PR's are welcome if you  want more functionality.
