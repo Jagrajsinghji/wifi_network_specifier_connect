@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:wifinetworkspecifierconnect/wifinetworkspecifierconnect.dart';
 
@@ -9,7 +11,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String ssid='', password='', state = 'This will show state';
+  String ssid = '', password = '', state = 'This will show state';
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +37,9 @@ class _MyAppState extends State<MyApp> {
             RaisedButton(
               onPressed: () async {
                 if (ssid.isNotEmpty && password.isNotEmpty) {
-                  String res = await Wifinetworkspecifierconnect.connect(ssid,password);
+                  String res =
+                      await Wifinetworkspecifierconnect.connect(ssid, password);
                   print(res);
-                  state = res;
                 } else {
                   state = 'Please Enter Both Feilds';
                 }
@@ -45,7 +47,15 @@ class _MyAppState extends State<MyApp> {
               },
               child: Text("Connect"),
             ),
-            Text(state)
+            StreamBuilder<bool>(
+              stream: Wifinetworkspecifierconnect.state(),
+              builder: (context, snapshot) {
+                if(snapshot?.data!=null){
+                  return Text(snapshot.data.toString());
+                }
+                return Text(state);
+              }
+            )
           ],
         ),
       ),

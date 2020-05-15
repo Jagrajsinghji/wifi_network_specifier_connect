@@ -51,7 +51,7 @@ class WifiDelegate {
             result.error("WIFI_TURNED_OFF", "Wifi Adapter is Offline", "Please Turn on the wifi adapter");
             return;
         }
-        Log.e("SDK", ""+SDK_INT);
+        Log.e("SDK", "" + SDK_INT);
         if (SDK_INT >= VERSION_CODES.Q) {
             WifiNetworkSpecifier.Builder
                     builder = new WifiNetworkSpecifier.Builder()
@@ -73,12 +73,18 @@ class WifiDelegate {
                     @Override
                     public void onAvailable(@NonNull Network network) {
                         Log.e("WIFIDelegate", "available");
+                        Intent intent = new Intent("SERVICE_EVENT");
+                        intent.putExtra("Name", "Wifi Avaiable");
+                        context.sendBroadcast(intent);
                         super.onAvailable(network);
                     }
 
                     @Override
                     public void onUnavailable() {
                         Log.e("WIFIDelegate", "Not available");
+                        Intent intent = new Intent("SERVICE_EVENT");
+                        intent.putExtra("Name", "Wifi Not Avaiable");
+                        context.sendBroadcast(intent);
                         super.onUnavailable();
                     }
                 });
@@ -107,6 +113,9 @@ class WifiDelegate {
             wifiManager.enableNetwork(netId, true);
             wifiManager.reconnect();
             result.success("wifi connected less than Oreo");
+            Intent intent = new Intent("SERVICE_EVENT");
+            intent.putExtra("Name", "Wifi Avaiable");
+            context.sendBroadcast(intent);
         } else {
             new NetworkChangeReceiver().connect(netId);
         }
@@ -207,6 +216,9 @@ class WifiDelegate {
                 wifiManager.enableNetwork(netId, true);
                 wifiManager.reconnect();
                 result.success("Wifi Connected greater than oreo");
+                Intent _intent = new Intent("SERVICE_EVENT");
+                _intent.putExtra("Name", "Wifi Avaiable");
+                context.sendBroadcast(_intent);
                 willLink = false;
                 Log.e("NetworkCR", "wifi connected");
             }
