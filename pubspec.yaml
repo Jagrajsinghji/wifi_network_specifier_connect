@@ -1,6 +1,6 @@
 name: wifinetworkspecifierconnect
 description: A new Flutter plugin which uses wifi network specifier for Android Q
-version: 0.0.2
+version: 0.1.0
 repository: https://github.com/Jagrajsinghji/wifi_network_specifier_connect
 
 environment:
