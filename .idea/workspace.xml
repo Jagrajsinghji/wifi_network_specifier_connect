@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f06dd3-0562-44b8-bfef-f610d43c66ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/akaalapps/wifinetworkspecifierconnect/WifiDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/akaalapps/wifinetworkspecifierconnect/WifiDelegate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/akaalapps/wifinetworkspecifierconnect/WifinetworkspecifierconnectPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/akaalapps/wifinetworkspecifierconnect/WifinetworkspecifierconnectPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/wifinetworkspecifierconnect.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/wifinetworkspecifierconnect.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
